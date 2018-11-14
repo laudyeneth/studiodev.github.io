@@ -1,0 +1,207 @@
+/*-----ANCHO DE TODOSIN PADDING-----*/
+* { box-sizing: border-box; } /* el asterisco sirve para seleccionar todos los elementos o etiquetas*/
+/* esta propiedad mantiene el ancho, independiente del padding que se especifique*/
+
+
+/*-----ESTILOS DE LA LETRA DE LA PAGINA (google fonts)-----*/
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+    /*-----ESTILOS DE LA IMAGEN DE FONDO-----*/
+.home-wrapper {/* Esta clase usa como selector .home-wrapper, que creamos en el index  */
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../images/background.jpg') no-repeat center top; 
+    /*Escribir esta url asi, me permite devolverme de la carpeta css a la carpeta studiodev y luego a carpeta images*/
+    /*el linear-gradiente es para oscurecer la imagen de fondo */
+    background-size: cover;
+    color: white;
+}
+
+header {
+    position: fixed;
+    padding: 10px 0;
+    width: 100%;
+    background-color: rgb(48, 48, 48, 0.5);
+}
+
+header img {
+    width: 200px;
+}
+
+    /*-----ESTILOS DEL MENU DE NAVEGACION-----*/
+header nav {
+    float: right; /*que el menu flote (arriba) a la derecha*/
+    margin-top: 10px; /*que ponga este margen arriba al menu */
+}
+
+header nav a {/*esto me referencia a la etiqueta nav y a todas las etiquetas a que estan dentro de ellas*/
+    color: white; /*el color de la fuente es blanco*/
+    font-weight: bold; /*el peso de la fuente es negrilla*/
+    text-decoration: none;/*que no le agregue subrayado a la fuente*/
+    margin-left: 10px;/*esto le da más espacio entre vinculo y vinculo (de 10 pixeles)*/
+    padding: 10px 15px;/*10 pixeles de espacio arriba y abajo; y 15 pixeles de espacio a los lados*/
+}
+
+header nav a.active{ /*a.active me referencia la clase del menu home para activarlo*/
+    background: #fed136;/*le pone amarillo para resaltar qe esta activo*/
+    border-radius: 3px; /*redondea los bordes del badgraund */
+}
+
+/*e*/
+    /*-----ESTILOS PARA LA SECCION HOME-----*/
+#home {
+    /*esto me permitira dar espacio entre menu de navegacion y la seccion de servicios*/
+    text-align: center;/*texto aliniado al centro*/
+    padding: 200px 0 150px;/*margen de 200 pixeles arriba, cero a los lados y 150 abajo*/
+}
+
+#home h1 { /*estilo del titulo h1*/
+    font-size: 68px; /*este es el tamaño de la fuente*/
+    font-weight: normal;/*usara la letra normalde la fuente*/
+    line-height: 1.2;
+    margin-bottom: 40 px;
+}
+
+#home .divider {
+    width: 80px;
+    border-top: 5px solid #fed136;
+    margin: 50px auto;
+}
+
+#home p { /*incrementamos el tamaño deletra del parrafo*/
+    font-size: 24px;
+    margin-top: 40px;
+}
+
+/*-----ESTILOS PARA LA SECCION DE REDES SOCIALES-----*/
+
+#home .social {  /*para la seccion de redes sociales*/
+    margin-top: 80px;/*para despegarlo del parrafo*/
+}
+
+#home .social a {  /*para iconos de redes sociales*/
+    color: white; /*color blanco*/
+    display: inline-block;
+    border-radius: 50%; /*para que se vea redondo*/
+    background-color: black; /*c*/
+    font-size: 24px; /*tamaño de la fuente*/
+    font-weight: bold; /*negrilla*/
+    height: 50px; /*el alto*/
+    width: 50px; /*cel ancho*/
+    line-height: 50px;  /*alto de linea, para centrar*/
+    margin-right: 10px; /*margen para separarlos*/
+
+    /*Para cuando pase el mouse por el icono cambielentamente a color amarillo*/
+    /*Es decir un efecto de trasicion de color*/
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    transition: all .3s;
+}
+
+/*para resaltar el icono en amarillo cando paso el mouse*/
+#home .social a:hover {  /*a: ese dos puntos es para hacer referencia a una seudoclase o seudoelemento*/
+    background-color: #fed136;
+}
+
+    /*-----ESTILOS PARA LAS CAJAS DE SERVICIOS Y DEMAS-----*/
+#servicios .box { /*hace referencia a los class box (en los div)*/
+    /*todo esto para que se ve en columnas*/
+    display: inline-block;
+    text-align: center;
+    width: 33%;
+    padding: 10px;
+}
+
+/*-----ESTILOS PARA SECCION DE VIDEO-----*/
+#video { 
+    background-color: black; /*fondo negro*/
+    text-align: center; /*cenrat video*/
+    padding: 30px 0; /*achicar el espacio a 30 arriba y abajo y cero a los lados*/
+}
+
+#portafolio { /*esto le agrega un fondo gris a la seccion de protafolio*/
+    background-color: whitesmoke;
+}
+
+#portafolio .box{  /*columnas de seccion de portafolio*/
+    display: inline-block;
+    text-align: center;
+    width: 31%; /*ajustesa imagenes para separarlas*/
+    margin: 1%; /*ajustesa imagenes para separarlas*//*ajustesa las imagenes*/
+    background-color: white;
+}
+
+#portafolio .box img {  /*ajustes a las imagenes*/
+    width: 100%;
+}
+
+#portafolio .box p {  /*ajustes a la letra de etiqueta p*/
+    color: #666;
+    padding: 10px;
+}
+
+/*-----REGLAS PARA SECCION DE CONTACTO-----*/
+#contacto {
+    background-color: #303030; /*--fondo oscuro--*/
+    background-image: url('../images/map-image.png');/*--imagen q esta carpeta images--*/
+    background-position: center; /*--centrado--*/
+    background-repeat: no-repeat; 
+    text-align:  center;
+}
+
+#contacto h2 { /*--formato del texto h2--*/
+    color: white;
+}
+
+#contacto input { /*--formato del input--*/
+    padding: 20px;
+    width:  400px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+#contacto textarea{  /*--formato de los cuadros textarea--*/
+    margin: 20px 0;
+    padding: 20px;
+    width: 400px;
+}
+
+#contacto button { /*--formato para el boton de contacto--*/
+    background-color: #fed136;
+    padding: 20px 40px;
+    border-color: #fed136;
+    border-radius: 3px;
+    color: wahite;
+    font-size: 18px;
+    line-height: 1;
+    font-weight: bold;
+}
+
+/*-----REGLAS PARA SECCION PIE DE PAGINA-----*/
+footer {
+    padding: 90px 0;
+    text-align: center;
+    font-size: 18px;
+}
+
+/*-----REGLAS PARA TODAS LAS SECCIONES-----*/
+section {
+    padding: 80px 0;/*todas las secciones le pone espacio arriba y abajode 80 y a los lados cero*/
+}
+
+section h2 { /*en el section todoslos h2*/
+    font-size: 32px; /*etamaño de letra*/
+    text-align: center; /*alineado al centro*/
+    margin-bottom: 80px; /*espacio entre titulo y pararafo*/
+}
+
+
+
+/*-----CENTRAR DIV EN CSS-----*/
+.container { /*hay que ir al index y asignarsela al header*/
+    width: 992px;
+    margin-left: auto;
+    margin-right: auto;
+}

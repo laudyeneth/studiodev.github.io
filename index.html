@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Studio Dev</title>
+        <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet"><!--fuente desde: google fonts-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!--fuente de icinos-->
+        <link rel="stylesheet" href="css/normalize.css"> <!--Esto sobreescribe todos los estilos para unificar que se vea asi en tdos los navegadores, esto para los estilos unificados-->
+        <link rel="stylesheet" href="css/style.css"> <!--Esta es una ruta relativa a ese archivo css-->
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script src="js/app.js"></script>
+
+    </head>
+
+    <body>
+  
+        <!----SECCION DE MENU NAVEGACION----->
+        <div class="home-wrapper"><!--Esta division me permite poner la imagen de fonde en esta sección-->
+            <header> <!--esta referenciado en archivo style .container-->
+                <div class="container">
+                    <img src="images/logo.png" alt="Logo studio dev"> <!--src y alt son 2 atributos de la etiqueta img-->
+                    <!--src ( se pone la ruta relativa del archivo) y alt (es un texto que describe la imagen)-->
+                    <!--alt (es para el CEO optimizacion de busqueda de los navegadores y tambien para las personas con discapacidad visual)-->
+                    <nav>
+                        <!--Esto para crear el menú de navegacion de mi pagina la etiqueta a (tiene el atrbuto href para poner la ruta a donde va a navegar)-->
+                        <a href="#home" class="active">HOME</a> <!--la class active, permite activar este vinculo-->
+                        <a href="#servicios">SERIVICIOS</a>
+                        <a href="#portafolio">PORTAFOLIO</a>
+                        <a href="#contacto">CONTACTO</a>
+                    </nav><!--s-->  
+                </div>
+            </header>
+            
+            <!----SECCION DE REDES SOCIALES----->
+            <!--section (permite definir secciones de la pagina web)-->
+            <section id="home"><!--esta clase me permitira referenciar esta seccion en el css, ese id lo usaré como selector)-->
+                <h1>CREAMOS LAS <strong>APLICACIONES</strong> DEL FUTURO</h1><!--en este titulo la palabra aplicaciones es en negrilla y lo demas no, por eso hay que envolverla en etiqueta strong-->
+                <div class="divider"></div>
+                <p>Dev Studio es la mejor opción si necesitas un prototipo o quieres acelerar tu ciclo de desarrollo.</p>
+                <!--div (me permite agrupar en una parte definida de la pantalla, los link hacia redes sociales)-->
+                <div class="social"> <!--le pongo una clase para poder referenciar en el css-->
+                    <!--Reemplazo palabra facebook, twitter y github; por la etiqueta i para poder insertar el icono-->
+                    <a href=""><i class="fa fa-facebook"></i></a> 
+                    <a href=""><i class="fa fa-twitter"></i></a>
+                    <a href=""><i class="fa fa-github"></i></a>
+                </div>
+            </section>
+        </div>
+
+        <!----SECCION DE SERVICIOS----->
+        <section id="servicios" class="container"><!--el id hace referencia a #servicios del div del home-->
+            <!--la clase container es para contenerlo y que no expanda a toda la pantalla-->
+            <h2>SERVICIOS</h2>
+
+            <div class="box"> <!--class box, para referenciar en css y poder presentar en cajas ese contenido-->
+                <img src="images/web-design.png" alt="Web design">
+                <h3>Web design</h3>
+                <p>Somos expertos en la web design. Nuestro equipo es por mucho el mejor. Nadie nos hace competencia.</p>
+            </div>
+
+            <div class="box">
+                <img src="images/web-development.png" alt="Web Development">
+                <h3>Web Development</h3>
+                <p>Somos expertos en Web Development. Usamos HTML5, CSS3, Git, Bootstrap, Ruby on Rails, y JavaScript.</p>
+            </div>
+
+            <div class="box">
+                <img src="images/ux-ui.png" alt="Ux and Ui">
+                <h3>Mobile Development</h3>
+                <p>Somos expertos en Mobile Development. Creemos que el futuro está en responsive design y no nativo.</p>
+            </div>
+        </section>
+
+        <!----SECCION DE VIDEO----->
+        <section id="video">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/12gvJgLE4us" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </section>
+
+        <!----SECCION DE PORTAFOLIO----->
+        <section id="portafolio"> <!--hace referencia a #portafolio del div del home-->
+            <!--clase container para que no se expanda en la pantalla y se vea en columnas-->
+            <div class ="container">  
+                <!-- contenedor: hace q badgroud gris sea para toda la seccion y se mantega a lo largo de pantalla -->
+
+                <h2>PORTAFOLIO</h2>
+                <div class="box">
+                    <img src="images/portafolio/roundicons.png" alt="Iconos redondeados">
+                    <h3>Iconos redondeados</h3>
+                    <p>Creamos los mejores íconos redondeados del mercado.</p>
+                </div>
+                <div class="box">
+                    <img src="images/portafolio/roundicons.png" alt="Creative Digital">
+                    <h3>Creative Digital</h3>
+                    <p>Excelente trabajo que nos quedó para Creative Digital Inc.</p>
+                </div>
+                <div class="box">
+                    <img src="images/portafolio/escape.png" alt="We can do that">
+                    <h3>We can do that</h3>
+                    <p>Increíble elaboración del concepto que hicimos para Yup, we can do that.</p>
+                </div>
+                <div class="box">
+                    <img src="images/portafolio/escape.png" alt="Escape">
+                    <h3>Escape</h3>
+                    <p>Este es el mismo que el anterior pero esperemos que nadie lo note.</p>
+                </div>
+                <div class="box">
+                    <img src="images/portafolio/dreams.png" alt="Dreams">
+                    <h3>Dreams</h3>
+                    <p>Una aplicación que nos quedó muy bacana. Hecha con Ruby on Rails.</p>
+                </div>
+                <div class="box">
+                    <img src="images/portafolio/startup-framework.png" alt="Startup Framework">
+                    <h3>Startup Framework</h3>
+                    <p>Este es increíble. Es un desarrollo que hicimos ya hace un tiempo.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!----SECCION DE CONTACTO----->
+        <section id="contacto">
+            <h2>CONTACTO</h2>
+            <form>
+                <!--los div me permite mostrar en bloque estos cuadros--->
+                <div> <input type="text" placeholder="Tu email"> </div> 
+                <!--el input (pemite meter texto), el placeholder (es el texto que muestra por defecto dentro del input, ara orientacion del usuario)--->
+                <div> <textarea rows="10" placeholder="Tu mensaje"></textarea> </div>
+                <button>ENVIAR</button>
+            </form>
+        </section>
+
+        <!--SECCION DE MAPA EMBEBIDO--->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2873.4904029907857!2d-74.05796567098143!3d4.656039636690805!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9a5cc7768b05%3A0xf1e33ac37c8c083d!2sCentro+Comercial+Avenida+Chile!5e0!3m2!1ses-419!2sco!4v1540913628707" width="100%" height="200%" frameborder="0" style="border:0" allowfullscreen></iframe> 
+        <!--cambie valores de width y height para ajustar el tamaño al largo de la pantalla-->
+
+        <!--PIE DE PAGINA--->
+        <footer>© 2015 <strong>Studio Dev</strong>, Todos los derechos reservados</footer>
+        <!--elstrong es para envolver este texto y ponerlo en negrilla--->
+
+    </body>
+</html>
